@@ -1,14 +1,14 @@
 <?php 
 require '../includes/common.php';
 $name = $_POST['name'];
-$email = $_POST['$email'];
+$email = $_POST['email'];
 $password = $_POST['password'];
-$sql = "SELECT * FROM users WHERE email='$email'";
-$result = mysqli_query($con,$sql);
+$Sql = "SELECT * FROM users WHERE Email= '$email'";
+$result = mysqli_query($con, $Sql);
 $num_rows = mysqli_num_rows($result);
-if($num_rows >0){
-    echo "<script>alert('Email already exists. Please login with your account');</script>";
-    header('location: ../forms/login.php');
+if ($num_rows !=0) {
+    echo "<script>alert('Email already exists. Please Login into your account')</script>";
+    header('location: ../forms/register.php');
 }
 else{
     $user_registration_query = "Insert into users(name, email, password) 
@@ -18,9 +18,6 @@ else{
     $query = "SELECT * FROM users WHERE email='$email' AND password = '$password'";
     $result= mysqli_query($con,$query) or die(mysqli_error($con));
     $result_row= mysqli_fetch_assoc($result);
-    if(!isset($_SESSION)){
-        session_start();
-    }
     $_SESSION['name']= $name;
     $_SESSION['id']= $result_row['ID'];
     $_SESSION["email"] = $email;

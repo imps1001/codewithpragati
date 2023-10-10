@@ -25,8 +25,8 @@ require 'includes/common.php';
         <div class="content">
             <h2>Learn To Become<br /><span>Software Engineer</span></h2>
             <p>I can help you learn <span class="typing-text"> </span><br />And Grasp A Placement</p>
-            <p style="margin:0; padding:0;">Hello<span> <?php echo $_SESSION['name'] ?> </span></p>
-            <div class="socials">
+            <p style="margin:0; padding:0; font-size: 30px; ">Hello<span style="font-size: 36px;"> <?php echo $_SESSION['name'] ?> </span></p>
+            <div class="socials" style="margin-top: 4rem;" >
                 <ul class="social-icons">
                     <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/imps1001/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                     <li><a class="github" aria-label="GitHub" href="https://github.com/imps1001" target="_blank"><i class="fab fa-github"></i></a></li>
