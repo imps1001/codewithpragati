@@ -8,7 +8,7 @@ $result = mysqli_query($con, $Sql);
 $num_rows = mysqli_num_rows($result);
 if ($num_rows !=0) {
     echo "<script>alert('Email already exists. Please Login into your account')</script>";
-    header('location: ../forms/register.php');
+    header('location: ../forms/login.php');
 }
 else{
     $user_registration_query = "Insert into users(name, email, password) 

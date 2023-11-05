@@ -8,7 +8,7 @@
             if(isset($_SESSION['email'])){ 
             ?>
                 <li><a class="active nav-item" href="index.php">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#mycourses">My Courses</a></li>
                 <li><a href="#courses">Courses</a></li>
                 <li><a class="btn btn-lg nav-item" href="./includes/logout.php">Logout <i class="fa-solid fa-circle-right"></i></a></li>
             <?php
